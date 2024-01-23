@@ -3,10 +3,14 @@ import json
 from datetime import datetime
 
 
-def save_dates():
-    """Esta función crea una estructura de carpetas nombradas con la información de
-    la fecha actual en el orden de año, mes y día (YYYY/MM/DD).
-    Además genera un archivo de texto plano (.json) que guarda la información de la hora actual.
+def save_dates(message):
+    """ Esta función crea una estructura de carpetas nombradas con la información de
+        la fecha actual en el orden de año, mes y día (YYYY/MM/DD).
+        Además genera un archivo de texto plano nombrado con la hora actual en
+        el orden de hora, minuto y segundo (hh_mm_ss.json) que contiene información.
+
+    Args:
+        message (str): Contiene la información del lugar que haya sido consultado.
     """
     #Fecha y hora actual
     current_date_and_time = datetime.now()
@@ -19,7 +23,10 @@ def save_dates():
 
     #Crear archivo hh_mm_ss.json
     file_name_js = hh + '_' + mm + '_' + ss + '.json'
-    data_js = {'hh': hh , 'mm': mm , 'ss': ss}
+    if message is not None:
+        data_js = message
+    else:
+        data_js = {'hh': hh , 'mm': mm , 'ss': ss}
 
     #Obtener ruta de la carpeta actual
     folder_path = os.path.abspath(os.getcwd())
@@ -30,4 +37,4 @@ def save_dates():
     with open(os.path.join(folder_path +  '/' + str(YYYY) + '/' + str(MM) + '/' + str(int(DD)), file_name_js), 'w') as file:
         json.dump(data_js, file)
 
-save_dates()
+save_dates("Prueba")
