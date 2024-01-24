@@ -1,0 +1,17 @@
+Instrucciones 
+
+Crearemos en conda un entorno virtual para poder manejar la misma versión de python
+
+Para crear el entorno virtual abrimos la terminal de conda y ejecutamos los siguientes comando
+
+1. conda create -n sirena_project python=3.10 (manejaremos la version 3.10 de python)
+
+2. conda activate sirena_project (Para activar el entorno)
+
+Instalado y activado lo anterior procedemos a instalar una extensión en Visual llamada "python environmente" esto con el fin de detectar el entorno que acabamos de crear
+
+Dependiendo de la API escogida se instalan las respectivas librerias y con el siguiente comando se ejecuta el programa 
+
+uvicorn main:app --reload (Para la API de FastAPI)
+
+Por último ir al navegador y buscar http://localhost:8000
