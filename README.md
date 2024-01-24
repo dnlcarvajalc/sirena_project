@@ -7,9 +7,16 @@ Para trabajar todos en un mismo entorno y no tener problemas con las diferentes 
     >- `conda create -n sirena_project python=3.10` (manejaremos la version 3.10 de python)
     >- `conda activate sirena_project` (Para activar el entorno)
 >
-2. Instalado y activado lo anterior procedemos a instalar una extensión en Visual llamada "python environmente" esto con el fin de detectar el entorno que acabamos de crear.
+2. Instalado y activado lo anterior procedemos a instalar una extensión en Visual llamada "Python Environmente Manager" esto con el fin de detectar el entorno que acabamos de crear.
 >
-3. Dependiendo de la API escogida se instalan las respectivas librerias y con el siguiente comando se ejecuta el programa:
-    >- `uvicorn main:app --reload` (Para la API de FastAPI)
+3. Para instalar las librerias requeridas por la API debemos correr el archivo de "requirements.txt" de la siguiente manera:
+    >- `pip install -r requirements.txt`
 >
-4. Por último ir al navegador y buscar [http://localhost:8000]()
+>***Nota:*** *Para saber todas las dependendias/librerias que tiene nuestro entorno y API existe una herramienta la cual nos permite generar de manera automatica en un archivo tipo texto (requerimients.txt en este ejemplo particular) con dichas dependencias:*
+>-`pip freeze > requirements.txt` *(Esto con fines informativos)*
+>
+4. Dependiendo de la API escogida se instalan las respectivas librerias y con el siguiente comando se ejecuta el programa:
+    >- `uvicorn sirena_project:app --reload` (Para la API de FastAPI)
+>
+5. Por último ir al navegador y buscar [http://localhost:8000]()
+
