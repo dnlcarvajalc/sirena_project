@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#imagenAleatoria
+{
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 400px;
+    height: 300px;
+    z-index: 2;
+
+}
+
+body{
+    background-color: #F6E6C2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* height: 100%; */
+    /* position: relative; */
+    overflow: hidden;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.glass-effect{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
+    max-width: 50%;
+    width: 100%;
+    margin: auto;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    position: relative;
+    z-index: 2;
+    /* margin-top: -20px; */
+
+}
+
+h1, p {
+    margin-top: 20px;
+}
+
+button{
+    background-color: #61dafb;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #4fa1db;
+}
+.anime_background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes girarIzquierda {
+    100%{
+       transform: rotate(-360deg);
+    }
+}
+
+@keyframes girarDerecha {
+    100%{
+       transform: rotate(360deg);
+    }
+}
+
+.gris{
+    animation: girarIzquierda 40s linear infinite;
+    transform-origin: 13px 25px;
+}
+
+.azul_rey{
+    animation: girarDerecha 20s linear infinite;
+    transform-origin: 13px 25px;
+}
+
+.azul_cielo{
+    animation: girarIzquierda 25s linear infinite;
+    transform-origin: 84px 93px;
+}
+
+.azul_bebe{
+    animation: girarDerecha 35s linear infinite;
+    transform-origin: 84px 93px;
+}
