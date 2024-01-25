@@ -11,4 +11,4 @@ templates = Jinja2Templates(directory="templates")
 @app.get("/")
 def read_root(request: Request):
 
-    return templates.TemplateResponse("main_template.html", {"request": request})
+    return templates.TemplateResponse("sirena_project.html", {"request": request})
