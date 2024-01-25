@@ -1,23 +1,23 @@
-function cargarImagenAleatoria ()
+function loadRandomImage()
 {
     const searchTerms ='tourist,landmark,travel,city,countries';
     const apiUrl = `https://source.unsplash.com/featured/?${searchTerms}`;
 
-    const imagen = document.getElementById('imagenAleatoria')
+    const image = document.getElementById('randomImage')
     const gif = document.getElementById('gif')
     const timestamp = new Date().getTime();
     const imageUrl = `${apiUrl}?timestamp=${timestamp}`;
-    imagen.style.display = 'none';
+    image.style.display = 'none';
     gif.style.display = 'block';
-    imagenInfo.style.display = 'none';
+    infoImage.style.display = 'none';
 
     axios.get(imageUrl)
     .then(Response =>
     {
-        imagen.src = Response.request.responseURL;
-        imagen.style.display = 'block';
+        image.src = Response.request.responseURL;
+        image.style.display = 'block';
         gif.style.display = 'none';
-        mostrarInformacionImagen()
+        showInfoImage()
     })
     .catch(error =>
     {
@@ -25,17 +25,17 @@ function cargarImagenAleatoria ()
     });
 }
 
-function mostrarInformacionImagen() {
+function showInfoImage() {
 
-    const nombreImagen = "Nombre de la imagen";
-    const descripcionImagen = "Descripción de la imagen";
+    const nameImage = "Nombre de la imagen";
+    const descriptionImage = "Descripción de la imagen";
 
     // Muestra la información de la imagen
-    const nombreElemento = document.getElementById("nombreImagen");
-    const descripcionElemento = document.getElementById("descripcionImagen");
-    const imagenInfo = document.getElementById("imagenInfo");
+    const nameElement = document.getElementById("nameImage");
+    const descriptionElement = document.getElementById("descriptionImage");
+    const infoImage = document.getElementById("infoImage");
 
-    nombreElemento.innerText = nombreImagen;
-    descripcionElemento.innerText = descripcionImagen;
-    imagenInfo.style.display = "block";
+    nameElement.innerText = nameImage;
+    descriptionElement.innerText = descriptionImage;
+    infoImage.style.display = "block";
 }

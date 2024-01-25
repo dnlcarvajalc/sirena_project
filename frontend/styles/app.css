@@ -9,12 +9,12 @@
     font-family: 'Mulish', sans-serif;
 }
 
-.texto{
+.text{
     display: flex;
     flex-direction: column;
 }
 
-#imagenAleatoria
+#randomImage
 {
     display: none;
     margin: 0 auto;
@@ -22,18 +22,16 @@
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px;
-    /* width: 400px; */
     width: 100%;
     height: 250px;
     z-index: 2;
-
 }
 
-.imagen-container{
+.image_container{
     position: relative;
 }
 
-.imagen-info{
+.info_image{
     position: relative;
     bottom: 0;
     left: 0;
@@ -44,7 +42,6 @@
     text-align: center;
     display: none;
     border-radius: 20px;
-    /* margin-bottom: 0.5px; */
 }
 
 body{
@@ -74,7 +71,7 @@ body{
     position: relative;
 }
 
-.glass-effect{
+.glass_effect{
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 20px;
@@ -88,7 +85,6 @@ body{
 }
 
 h1, p, h2,h3 {
-
     margin-bottom: 5px;
 }
 
@@ -107,6 +103,7 @@ button{
 button:hover{
     background-color: #4fa1db;
 }
+
 .anime_background{
     position: fixed;
     top: 0;
@@ -116,35 +113,35 @@ button:hover{
     z-index: 1;
 }
 
-@keyframes girarIzquierda {
+@keyframes turnLeft {
     100%{
        transform: rotate(-360deg);
     }
 }
 
-@keyframes girarDerecha {
+@keyframes turnRight {
     100%{
        transform: rotate(360deg);
     }
 }
 
-.gris{
-    animation: girarIzquierda 40s linear infinite;
+.navy_blue{
+    animation: turnLeft 40s linear infinite;
     transform-origin: 13px 25px;
 }
 
-.azul_rey{
-    animation: girarDerecha 20s linear infinite;
+.light_orange{
+    animation: turnRight 20s linear infinite;
     transform-origin: 13px 25px;
 }
 
-.azul_cielo{
-    animation: girarIzquierda 25s linear infinite;
+.strong_orange{
+    animation: turnLeft 25s linear infinite;
     transform-origin: 84px 93px;
 }
 
-.azul_bebe{
-    animation: girarDerecha 35s linear infinite;
+.yellow_green{
+    animation: turnRight 35s linear infinite;
     transform-origin: 84px 93px;
 }
 
