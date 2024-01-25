@@ -27,11 +27,11 @@
     z-index: 2;
 }
 
-.image_container{
+.ImageContainer{
     position: relative;
 }
 
-.info_image{
+.InfoImage{
     position: relative;
     bottom: 0;
     left: 0;
@@ -71,7 +71,7 @@ body{
     position: relative;
 }
 
-.glass_effect{
+.GlassEffect{
     background: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 20px;
@@ -104,7 +104,7 @@ button:hover{
     background-color: #4fa1db;
 }
 
-.anime_background{
+.AnimeBackground{
     position: fixed;
     top: 0;
     left: 0;
@@ -125,22 +125,22 @@ button:hover{
     }
 }
 
-.navy_blue{
+.navyBlue{
     animation: turnLeft 40s linear infinite;
     transform-origin: 13px 25px;
 }
 
-.light_orange{
+.lightOrange{
     animation: turnRight 20s linear infinite;
     transform-origin: 13px 25px;
 }
 
-.strong_orange{
+.strongOrange{
     animation: turnLeft 25s linear infinite;
     transform-origin: 84px 93px;
 }
 
-.yellow_green{
+.yellowGreen{
     animation: turnRight 35s linear infinite;
     transform-origin: 84px 93px;
 }
