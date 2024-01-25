@@ -20,3 +20,25 @@ Para trabajar todos en un mismo entorno y no tener problemas con las diferentes 
 >
 5. Por último ir al navegador y buscar [http://localhost:8000]()
 
+
+# **Instalación de Boto3 y configuración de credenciales con AWS CLI**
+Para poder acceder al servicio S3 de AWS desde python debemos instalar el kit de desarrollo de software (Boto3) y la interfaz de línea de comandos de AWS. Siguiendo los siguientes pasos.
+
+1. Instalación del kit de desarrollo de software ***Boto3*** usando ***pip***.
+    `pip install boto3`
+>
+2. Instalación de ***AWS CLI***.
+    >- Primero debemos ingresar a la página de **AWS** y descargar el instalador para el sistema operativo que estemos utilizando.
+    [https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html]()
+    >-  Ejecutamos el instalador.
+    >- Y verificamos que se haya instalado correctamente, abrimos una ventana del símbolo del sistema y ejecutamos el siguiente comando `aws --version`; y nos debe aparecer lo siguiente:
+    **aws-cli/2.10.0 Python/3.11.2 Windows/10 exe/AMD64 prompt/off**
+>
+3. Una vez instalado el ***AWS CLI*** procedemos realizar la configuración de las credenciales:
+    >- Abrimos una ventana del símbolo del sistema (**cmd**) ejecutamos el siguiente comando:
+    `aws configure`
+    >- Especificamos las claves de acceso y damos *ENTER*.
+    >- Ahora ingresamos una región predeterminada: ***us-east-1***
+    >- Damos *ENTER* y así terminamos nuestra configuración de credenciales. Para ver los pasos más detallados podemos consultar la siguiente página. [https://boto3.amazonaws.com/v1/documentation/api/latest/guide/quickstart.html#configuration]()
+>
+4. Ya con las instalaciones realizadas y la configuración de credenciales hecha no deberíamos tener inconvenientes al ejecutar nuestro proyecto.
