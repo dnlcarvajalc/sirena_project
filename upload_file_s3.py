@@ -1,11 +1,14 @@
 import boto3
 import constants
 
-#Indica que servicio se va a utilizar
-s3 = boto3.resource('s3')
+def upload_file_s3(file, file_path):
+    #Indica que servicio se va a utilizar
+    s3 = boto3.resource('s3')
 
-#Se sube el archivo txt. al servicio S3
-with open('./s3_prueba/prueba.txt', 'rb') as data:
-    s3.Bucket(constants.BUCKET_NAME).put_object(Key='prueba.txt', Body=data)
+    #Se sube el archivo txt. al servicio S3
+    with open('./' + file_path + '/' + file, 'rb') as data:
+        s3.Bucket(constants.BUCKET_NAME).put_object(Key=file, Body=data)
 
-print("Done")
+    print("Done")
+
+upload_file_s3('prueba.txt', 's3_prueba')
