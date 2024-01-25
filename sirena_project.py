@@ -5,7 +5,7 @@ from starlette.requests import Request
 app = FastAPI()
 
 #directory = ubicación de la carpeta donde se ubican el html
-templates = Jinja2Templates(directory="templates") 
+templates = Jinja2Templates(directory="templates")
 
 #Respuesta de la petición (Corresponde a la dirección donde estan los templates y ubicacion de la pagina)
 @app.get("/")
