@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Mulish', sans-serif;
+}
+
+.text{
+    display: flex;
+    flex-direction: column;
+}
+
+#randomImage
+{
+    display: none;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 250px;
+    z-index: 2;
+}
+
+.imageContainer{
+    position: relative;
+}
+
+.infoImage{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    display: none;
+    border-radius: 20px;
+}
+
+body{
+    background-color: #F6E6C2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.gif{
+    width:100%;
+    height:auto;
+    padding-bottom:60%;
+    position:relative;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translate(-50%);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.glassEffect{
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(100px);
+    max-width: 50%;
+    width: 100%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+h1, p, h2,h3 {
+    margin-bottom: 5px;
+}
+
+button{
+    background-color: #61dafb;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #4fa1db;
+}
+
+.anime-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@keyframes turnLeft {
+    100%{
+       transform: rotate(-360deg);
+    }
+}
+
+@keyframes turnRight {
+    100%{
+       transform: rotate(360deg);
+    }
+}
+
+.navyBlue{
+    animation: turnLeft 40s linear infinite;
+    transform-origin: 13px 25px;
+}
+
+.lightOrange{
+    animation: turnRight 20s linear infinite;
+    transform-origin: 13px 25px;
+}
+
+.strongOrange{
+    animation: turnLeft 25s linear infinite;
+    transform-origin: 84px 93px;
+}
+
+.yellowGreen{
+    animation: turnRight 35s linear infinite;
+    transform-origin: 84px 93px;
+}
+
+@media (max-width: 768px) {
+    .gif {
+      width: 100px; /* Ajusta según tus necesidades para pantallas más pequeñas */
+    }
+  }
+
+@media (min-width: 769px) and (max-width: 1920px) {
+ .gif {
+      width: 500px; /* Ajusta según tus necesidades para pantallas más pequeñas */
+    }
+  }
