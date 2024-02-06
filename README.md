@@ -84,4 +84,5 @@ En la interfaz frontend, los usuarios pueden descubrir imágenes aleatorias de d
     - Juan Sebastián Cortes
     - Daniel Carvajal
     - Juan José Gómez
+>
 Cualquier contribución o sugerencia para mejorar el proyecto es altamente apreciada.
