@@ -79,7 +79,9 @@ En la interfaz frontend, los usuarios pueden descubrir imágenes aleatorias de d
     El proyecto es mantenido y desarrollado por un equipo de ingenieros electrónicos:
     - Daniela Villamizar
     - Manuela Correa
+    - Lina Franco
     - Jacobo Montenegro
-    - Juan Sebastián Cortez
+    - Juan Sebastián Cortes
     - Daniel Carvajal
-    Cualquier contribución o sugerencia para mejorar el proyecto es altamente apreciada.
+    - Juan José Gómez
+Cualquier contribución o sugerencia para mejorar el proyecto es altamente apreciada.
